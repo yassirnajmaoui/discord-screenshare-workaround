@@ -1,7 +1,7 @@
 # discord-screenshare-workaround
 A workaround for Discord's Linux screensharing problems.
 Linux users on Discord experience a problem when screensharing multiple monitors. The software wouldn't make a difference between two monitors.
-Ever since 2017, the Discord Linux community has been asking for a fix, which has not happened :(. Since I cannot change the Discord source code, I suggest here a workaround using a virtual camera using the stable and reliable `v4l2loopback` software.
+Ever since 2017, the Discord Linux community has been asking for a fix, which has not happened :(. Since I cannot change the Discord source code, I suggest here a workaround using a virtual camera from the reliable `v4l2loopback` software.
 
 There has been other workarounds in the past, but they didn't work on my PC...
 
