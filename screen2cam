@@ -1,0 +1,14 @@
+sudo modprobe v4l2loopback
+
+xval="-1"
+
+if [ "$1" == "1" ]; then
+	echo "Selecting monitor 1"
+	xval="0"
+elif [ "$1" == "2" ]; then
+	echo "Selecitng monitor 2"
+	xval="1920"
+fi
+echo "xval=$xval"
+ffmpeg -f x11grab -r 30 -s 1920x1080 -i :0.0+$xval,0 -vcodec rawvideo -vf hflip -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video2
+
